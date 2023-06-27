@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Simple Music Player</title>
+  <!-- Load FontAwesome icons -->
+  <script src="https://kit.fontawesome.com/0b8a6532ef.js" crossorigin="anonymous"></script>
+ 
+  <!-- Load the custom CSS style file -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" href="./mn.jpeg" type="image/icon type">
+</head>
+<body>
+  <div class="player">
+ 
+    <!-- Define the section for displaying details -->
+    <div class="details">
+      <div class="now-playing">KaliDnali</div>
+      <div class="track-art"><img style=  "border-radius:30px ;" src="./bmb.jpeg" alt=""></div>
+      <div class="track-name">Diwana</div>
+      <div class="track-artist">Bohemia</div>
+    </div>
+ 
+    <!-- Define the section for displaying track buttons -->
+    <div class="buttons ">
+      <div class="prev-track " onclick="prevTrack()">
+        <i class="fa-solid fa-backward-step"></i> 
+      </div>
+      <div class="playpause-track" onclick="playpauseTrack()">
+        <i class="fa-sharp fa-solid fa-circle-play"></i>
+      </div>
+      <div class="next-track" onclick="nextTrack()"> 
+        <i class="fa-solid fa-forward-step"></i>
+      </div>
+    </div>
+ 
+    <!-- Define the section for displaying the seek slider-->
+    <div class="slider_container">
+      <div class="current-time">00:00</div>
+      <input type="range" min="1" max="100"
+        value="0" class="seek_slider" onchange="seekTo()">
+      <div class="total-duration">00:00</div>
+    </div>
+ 
+    <!-- Define the section for displaying the volume slider-->
+    <div class="slider_container">
+        <i class="fa-solid fa-volume-low"></i>
+      <input type="range" min="1" max="100"
+        value="99" class="volume_slider" onchange="setVolume()">
+        <i class="fa-solid fa-volume-high"></i>
+    </div>
+  </div>
+ 
+  <!-- Load the main script for the player -->
+  <script src="script.js"></script>
+</body>
+</html>
